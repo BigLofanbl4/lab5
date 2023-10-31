@@ -3,7 +3,6 @@
 
 import math
 
-PI = 3.1415926535
 EPS = 1e-10
 
 if __name__ == "__main__":
@@ -12,11 +11,11 @@ if __name__ == "__main__":
         print("Illegal value of x")
         exit(1)
 
-    a = x
+    a = 1
     S, n = a, 1
 
     while math.fabs(a) > EPS:
-        a = ((-1) ** n * (PI / 2) ** (2 * n)) / (math.factorial(2 * n) * (4 * n + 1))
+        a *= (-1 * x ** 2 * (4 * n + 1)) / (8 * n ** 2 + 18 * n + 10);
         S += a
         n += 1
 
